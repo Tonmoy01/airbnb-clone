@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* overflow: hidden; */
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.primary-header {
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -webkit-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -moz-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -ms-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -o-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  transform: scale(1, 1) translate(0);
+  -webkit-transform: scale(1, 1) translate(0);
+  -moz-transform: scale(1, 1) translate(0);
+  -ms-transform: scale(1, 1) translate(0);
+  -o-transform: scale(1, 1) translate(0);
+  transform-origin: 50% 50%;
+}
+
+.secondary-header {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -webkit-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -moz-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -ms-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -o-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  transform: scale(2.43, 1.75) translateY(-58px);
+  -webkit-transform: scale(2.43, 1.75) translateY(-58px);
+  -moz-transform: scale(2.43, 1.75) translateY(-58px);
+  -ms-transform: scale(2.43, 1.75) translateY(-58px);
+  -o-transform: scale(2.43, 1.75) translateY(-58px);
+  transform-origin: 50% 0%;
+}
+
+.show-item .primary-header {
+  visibility: hidden;
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -webkit-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -moz-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -ms-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  -o-transition: transform 250ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  transform: scale(0.34, 0.727272) translate(0);
+  -webkit-transform: scale(0.34, 0.727272) translate(0);
+  -moz-transform: scale(0.34, 0.727272) translate(0);
+  -ms-transform: scale(0.34, 0.727272) translate(0);
+  -o-transform: scale(0.34, 0.727272) translate(0);
+  transform-origin: 50% 50%;
+}
+
+.show-item .secondary-header {
+  top: 50px;
+  left: 50%;
+  visibility: visible;
+  transform-origin: 50% 0%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.main-header.show-item {
+  height: 105px;
+}
+
+.filter-header {
+  position: sticky;
+  top: 171px;
+}
+
+.show-item.filter-header {
+  top: 105px;
+}
